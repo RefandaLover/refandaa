@@ -530,10 +530,15 @@
 <p><img alt="augmented matriks" src="..\assets\images\matriks-A.jpg" /></p>
 <p>augmented matriks dirubah menjadi matriks segitiga atas dengan menggunakan OBE (Operasi Baris Elementer), seperti persamaan berikut :</p>
 <p><img alt="matriks gauss" src="..\assets\images\matriks-B.jpg" /></p>
-<p>Maka didapatkan penyeleseaian sebagai berikut :
-$$
+<p>Maka didapatkan penyeleseaian sebagai berikut :</p>
+<div>
+<div class="MathJax_Preview">
 x_{n}= \frac{b_{n} }{a_{n,n}}
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+x_{n}= \frac{b_{n} }{a_{n,n}}
+</script>
+</div>
 <h3 id="implementasi-pemrograman">Implementasi Pemrograman<a class="headerlink" href="#implementasi-pemrograman" title="Permanent link">&para;</a></h3>
 <p>Berikut program untuk persamaan linier dibawah ini:</p>
 <p>1 . 3x + y + 2z = 4</p>
@@ -606,11 +611,16 @@ $$</p>
 
 <h2 id="metode-gauss-jacobi">Metode Gauss Jacobi<a class="headerlink" href="#metode-gauss-jacobi" title="Permanent link">&para;</a></h2>
 <p>Metode iterasi Jacobi merupakan salah satu metode tak langsung, yang bermula dari suatu hampiran penyelesaian awal dan kemudian memperbaiki hampiran dalam tak berhingga namun langkah kovergen. Metode iterasi Jacobi ini digunakan untuk menyelesaikan persamaan linier berukuran besar dan proporsi keofeisian nolnya besar. </p>
-<p>Jika diubah dari persamaan linier, maka akan menjadi : <em><span><span class="MathJax_Preview">Ax=b</span><script type="math/tex">Ax=b</script></span></em></p>
-<p>diketahui bahwa matriks  A dapat dituliskan sebagai A=L+D+U, dengan L adalah matriks segitiga bawah, D adalah matriks diagonal, dan U adalah matriks segitiga atas. Lalu persamaan tersebut diubah menjadi :
-$$
+<p>Jika diubah dari persamaan linier, maka akan menjadi :  <em><span><span class="MathJax_Preview">Ax=b</span><script type="math/tex">Ax=b</script></span></em></p>
+<p>diketahui bahwa matriks  A dapat dituliskan sebagai A=L+D+U, dengan L adalah matriks segitiga bawah, D adalah matriks diagonal, dan U adalah matriks segitiga atas. Lalu persamaan tersebut diubah menjadi :</p>
+<div>
+<div class="MathJax_Preview">
 Dx + (L + U)x = B
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+Dx + (L + U)x = B
+</script>
+</div>
 <div>
 <div class="MathJax_Preview">
 x = D^{-1}[b-(L +U)x]
@@ -619,20 +629,35 @@ x = D^{-1}[b-(L +U)x]
 x = D^{-1}[b-(L +U)x]
 </script>
 </div>
-<p>Jika ditulis dalam aturan iteratif, maka metode iterai Jacobi dapat ditulis sebagai berikut:
-$$
+<p>Jika ditulis dalam aturan iteratif, maka metode iterai Jacobi dapat ditulis sebagai berikut:</p>
+<div>
+<div class="MathJax_Preview">
 X^{(k)}=D^-1(b-(L+U)X^{(k-1)}
-$$
-Dimana k merupakan banyaknya iterasi. Jika x_k menyatakan hampiran ke –k
-penyelesaian SPL, maka x_0 adalah hampira awal.
-$$
-x_{i}^{(k)}=\frac{1}{a_{ii}}(\sum x^{n}<em>{j\ne i}),i = 1,2,...n;k=1,2,3,...,
-$$
-Suatu matriks A berukuran n x n dikatakan dominan secara diagonal apabila :
-$$
-|a</em>{ii}|&gt;|a_{i,1}|+...+|a_{i,i-1}|+|a_{i,i+1}|+...+|a_{in}|
-$$
-untuk <em><span><span class="MathJax_Preview">i =1,2,3,...,n</span><script type="math/tex">i =1,2,3,...,n</script></span></em></p>
+</div>
+<script type="math/tex; mode=display">
+X^{(k)}=D^-1(b-(L+U)X^{(k-1)}
+</script>
+</div>
+<p>Dimana k merupakan banyaknya iterasi. Jika x_k menyatakan hampiran ke –k
+penyelesaian SPL, maka x_0 adalah hampira awal.</p>
+<div>
+<div class="MathJax_Preview">
+x_{i}^{(k)}=\frac{1}{a_{ii}}(\sum x^{n}_{j\ne i}),i = 1,2,...n;k=1,2,3,...,
+</div>
+<script type="math/tex; mode=display">
+x_{i}^{(k)}=\frac{1}{a_{ii}}(\sum x^{n}_{j\ne i}),i = 1,2,...n;k=1,2,3,...,
+</script>
+</div>
+<p>Suatu matriks A berukuran n x n dikatakan dominan secara diagonal apabila :</p>
+<div>
+<div class="MathJax_Preview">
+|a_{ii}|&gt;|a_{i,1}|+...+|a_{i,i-1}|+|a_{i,i+1}|+...+|a_{in}|
+</div>
+<script type="math/tex; mode=display">
+|a_{ii}|>|a_{i,1}|+...+|a_{i,i-1}|+|a_{i,i+1}|+...+|a_{in}|
+</script>
+</div>
+<p>untuk <em><span><span class="MathJax_Preview">i =1,2,3,...,n</span><script type="math/tex">i =1,2,3,...,n</script></span></em></p>
 <h3 id="implementasi-pemrograman_1">Implementasi Pemrograman<a class="headerlink" href="#implementasi-pemrograman_1" title="Permanent link">&para;</a></h3>
 <p>Berikut program untuk persamaan linier dibawah ini:</p>
 <p>1 . 3x + y + 2z = 4</p>

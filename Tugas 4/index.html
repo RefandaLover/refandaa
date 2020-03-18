@@ -461,14 +461,24 @@
 <h2 id="metode-recursive-trapezoid">Metode Recursive Trapezoid<a class="headerlink" href="#metode-recursive-trapezoid" title="Permanent link">&para;</a></h2>
 <p>Metode trapesium rekursif adalah suatu metode pendekatan integral numerik dengan polinom orde satu. Dalam metode ini, kurva yang berbentuk lengkung di dekatkan dengan garis lurus sedemikian sehingga bentuk dibawah kurvanya seperti trapesium.</p>
 <p><img alt="trapezoid" src="..\assets\images\trapezoid.jpg" /></p>
-<p>Luas dibawah kurva dengan fungsi <em><span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span></em> antara <em><span><span class="MathJax_Preview">a=x_{0}</span><script type="math/tex">a=x_{0}</script></span></em> dan <em><span><span class="MathJax_Preview">b=x_{1}</span><script type="math/tex">b=x_{1}</script></span></em> didekati oleh suatu trapesium. Dalam trapesium ini f(a) dan f(b) sebgaai alas dan sisi atas dan <em><span><span class="MathJax_Preview">b-a</span><script type="math/tex">b-a</script></span></em> adalah tinggi dari trapesium tersebut. Menurut teorema dasar rumus integral dapat dihitung dengan rumus berikut:
-$$
+<p>Luas dibawah kurva dengan fungsi <em><span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span></em> antara <em><span><span class="MathJax_Preview">a=x_{0}</span><script type="math/tex">a=x_{0}</script></span></em> dan <em><span><span class="MathJax_Preview">b=x_{1}</span><script type="math/tex">b=x_{1}</script></span></em> didekati oleh suatu trapesium. Dalam trapesium ini f(a) dan f(b) sebgaai alas dan sisi atas dan <em><span><span class="MathJax_Preview">b-a</span><script type="math/tex">b-a</script></span></em> adalah tinggi dari trapesium tersebut. Menurut teorema dasar rumus integral dapat dihitung dengan rumus berikut:</p>
+<div>
+<div class="MathJax_Preview">
 {\displaystyle \int _{a}^{b}f(x)\,dx=F(b)-F(a)}
-$$
-Estimasi berdasarkan satu interval :
-$$
+</div>
+<script type="math/tex; mode=display">
+{\displaystyle \int _{a}^{b}f(x)\,dx=F(b)-F(a)}
+</script>
+</div>
+<p>Estimasi berdasarkan satu interval :</p>
+<div>
+<div class="MathJax_Preview">
 h=b-a
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+h=b-a
+</script>
+</div>
 <div>
 <div class="MathJax_Preview">
 R(0,0) = \frac{b-a}{2}(f(a)+f(b))
@@ -477,10 +487,15 @@ R(0,0) = \frac{b-a}{2}(f(a)+f(b))
 R(0,0) = \frac{b-a}{2}(f(a)+f(b))
 </script>
 </div>
-<p>Estimasi berdasarkan 2 interval :
-$$
+<p>Estimasi berdasarkan 2 interval :</p>
+<div>
+<div class="MathJax_Preview">
 h = \frac{b-a}{2}
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+h = \frac{b-a}{2}
+</script>
+</div>
 <div>
 <div class="MathJax_Preview">
 R(1,0) = \frac{b-a}{2}\left [(f(a+h)+\frac{1}{2}(f(a)+f(b)) \right ]
@@ -498,13 +513,18 @@ R(1,0) = \frac{1}{2}R(0,0)+h[f(a+h)]
 </script>
 </div>
 <ul>
-<li><em><span><span class="MathJax_Preview">R(0,0)</span><script type="math/tex">R(0,0)</script></span></em> : berdasarkan pada estimasi sebelumnya dan</li>
+<li><span><span class="MathJax_Preview">R(0,0)</span><script type="math/tex">R(0,0)</script></span>* : berdasarkan pada estimasi sebelumnya dan</li>
 <li><em><span><span class="MathJax_Preview">h[f(a)+(h)]</span><script type="math/tex">h[f(a)+(h)]</script></span></em> : berdasarkan pada titik baru</li>
 </ul>
-<p>Jadi, didapatkan formula untuk metode trapesium rekursif seperti berikut :
-$$
+<p>Jadi, didapatkan formula untuk metode trapesium rekursif seperti berikut :</p>
+<div>
+<div class="MathJax_Preview">
 h=\frac{b-a}{2^n}
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+h=\frac{b-a}{2^n}
+</script>
+</div>
 <div>
 <div class="MathJax_Preview">
 R(n,0) = \frac{1}{2}R(n-1,0)+h\left [\sum_{k=1}^{2^{n-1}}f(a+(2k-1)h) \right ]
@@ -515,11 +535,11 @@ R(n,0) = \frac{1}{2}R(n-1,0)+h\left [\sum_{k=1}^{2^{n-1}}f(a+(2k-1)h) \right ]
 </div>
 <h2 id="algoritma-integral-trapezoid">Algoritma Integral Trapezoid<a class="headerlink" href="#algoritma-integral-trapezoid" title="Permanent link">&para;</a></h2>
 <ol>
-<li>definisikan <em><span><span class="MathJax_Preview">y=f(x)</span><script type="math/tex">y=f(x)</script></span></em></li>
+<li>definisikan  <em><span><span class="MathJax_Preview">y=f(x)</span><script type="math/tex">y=f(x)</script></span></em></li>
 <li>tentukan batas bawah (a) dan batas atas integrasi (b)</li>
 <li>tentukan jumlah pembagi n</li>
-<li>hitung <em><span><span class="MathJax_Preview">h=\frac{(b-a)}{2^n}</span><script type="math/tex">h=\frac{(b-a)}{2^n}</script></span></em></li>
-<li>hitung <em><span><span class="MathJax_Preview">L = \frac{h}{2}\left (f_{0}+2\sum_{i=1}^{n-1}f_{i}+f_{n} \right )</span><script type="math/tex">L = \frac{h}{2}\left (f_{0}+2\sum_{i=1}^{n-1}f_{i}+f_{n} \right )</script></span></em></li>
+<li>hitung  <em><span><span class="MathJax_Preview">h=\frac{(b-a)}{2^n}</span><script type="math/tex">h=\frac{(b-a)}{2^n}</script></span></em></li>
+<li>hitung  <em><span><span class="MathJax_Preview">L = \frac{h}{2}\left (f_{0}+2\sum_{i=1}^{n-1}f_{i}+f_{n} \right )</span><script type="math/tex">L = \frac{h}{2}\left (f_{0}+2\sum_{i=1}^{n-1}f_{i}+f_{n} \right )</script></span></em></li>
 </ol>
 <h3 id="listing-program">Listing Program<a class="headerlink" href="#listing-program" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">fungsi</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
