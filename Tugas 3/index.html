@@ -611,7 +611,7 @@ x_{n}= \frac{b_{n} }{a_{n,n}}
 
 <h2 id="metode-gauss-jacobi">Metode Gauss Jacobi<a class="headerlink" href="#metode-gauss-jacobi" title="Permanent link">&para;</a></h2>
 <p>Metode iterasi Jacobi merupakan salah satu metode tak langsung, yang bermula dari suatu hampiran penyelesaian awal dan kemudian memperbaiki hampiran dalam tak berhingga namun langkah kovergen. Metode iterasi Jacobi ini digunakan untuk menyelesaikan persamaan linier berukuran besar dan proporsi keofeisian nolnya besar. </p>
-<p>Jika diubah dari persamaan linier, maka akan menjadi :  <em><span><span class="MathJax_Preview">Ax=b</span><script type="math/tex">Ax=b</script></span></em></p>
+<p>Jika diubah dari persamaan linier, maka akan menjadi :   <em><span><span class="MathJax_Preview">Ax=b</span><script type="math/tex">Ax=b</script></span></em>   </p>
 <p>diketahui bahwa matriks  A dapat dituliskan sebagai A=L+D+U, dengan L adalah matriks segitiga bawah, D adalah matriks diagonal, dan U adalah matriks segitiga atas. Lalu persamaan tersebut diubah menjadi :</p>
 <div>
 <div class="MathJax_Preview">
@@ -741,15 +741,25 @@ x_{i}^{(k)}=\frac{1}{a_{ii}}(\sum x^{n}_{j\ne i}),i = 1,2,...n;k=1,2,3,...,
 
 <h2 id="metode-gauss-seidel">Metode Gauss Seidel<a class="headerlink" href="#metode-gauss-seidel" title="Permanent link">&para;</a></h2>
 <p>Metode Gauss Seidel digunakan untuk menyelesaikan sistem persamaan linier (SPL) berukuran besar dan proporsi koefisien nolnya besar, seperti sistem-sistem yang banyak ditemukan dalam sistem persamaan diferensial. Metode iterasi Gauss Seidel dikembangkan dari gagasan metode iterasi pada solusi persamaan tak linier. Dengan metode Gauss seidel sesatan pembultan dapat diperkecil karena dapat meneruskan iterasi sampai solusinya seteliti mungkin sesuai dengan batass sesatan yang diperbolehkan.</p>
-<p>Rumus iterasi untuk hampiran ke-k pada metode Gauss Seidel adalah sebagai berikut. Untuk <em><span><span class="MathJax_Preview">i=1,2,...,n</span><script type="math/tex">i=1,2,...,n</script></span></em> dan <em><span><span class="MathJax_Preview">k=1,2,3,...</span><script type="math/tex">k=1,2,3,...</script></span></em>
-$$
+<p>Rumus iterasi untuk hampiran ke-k pada metode Gauss Seidel adalah sebagai berikut. Untuk  <em><span><span class="MathJax_Preview">i=1,2,...,n</span><script type="math/tex">i=1,2,...,n</script></span></em> dan <em><span><span class="MathJax_Preview">k=1,2,3,...</span><script type="math/tex">k=1,2,3,...</script></span></em></p>
+<div>
+<div class="MathJax_Preview">
 x_{i}^{(k)} = \frac{1}{a_{ii}}(b_{i} - \sum_{j=1}^{i-1}a_{ij}x_{j}^{(k)} - \sum_{j=i+1}^{n}a_{ij}x_{j}^{(k-1)})
-$$
-dengan syarat <em><span><span class="MathJax_Preview">a_{ii} \neq 0</span><script type="math/tex">a_{ii} \neq 0</script></span></em>. Metode iterasi Gauss-Seidel dapat dinyatakan dalam bentuk matriks. Nyatakan matriks koefisien A sebagai <em><span><span class="MathJax_Preview">A=D+(L+U)</span><script type="math/tex">A=D+(L+U)</script></span></em>, dengan L dan U berturut-turut adalah matriks segitiga bawah dan atas dengandiagonal nol dan D matriks diagonal. </p>
-<p>Rumus iterasi Gauss-Seidel dapat ditulis dalam bentuk :
-$$
+</div>
+<script type="math/tex; mode=display">
+x_{i}^{(k)} = \frac{1}{a_{ii}}(b_{i} - \sum_{j=1}^{i-1}a_{ij}x_{j}^{(k)} - \sum_{j=i+1}^{n}a_{ij}x_{j}^{(k-1)})
+</script>
+</div>
+<p>dengan syarat  <em><span><span class="MathJax_Preview">a_{ii} \neq 0</span><script type="math/tex">a_{ii} \neq 0</script></span></em> . Metode iterasi Gauss-Seidel dapat dinyatakan dalam bentuk matriks. Nyatakan matriks koefisien A sebagai  <em><span><span class="MathJax_Preview">A=D+(L+U)</span><script type="math/tex">A=D+(L+U)</script></span></em> , dengan L dan U berturut-turut adalah matriks segitiga bawah dan atas dengandiagonal nol dan D matriks diagonal. </p>
+<p>Rumus iterasi Gauss-Seidel dapat ditulis dalam bentuk :</p>
+<div>
+<div class="MathJax_Preview">
 X^{(k)}=D-1(b-LX^{(k)}-UX^{(k-1)}
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+X^{(k)}=D-1(b-LX^{(k)}-UX^{(k-1)}
+</script>
+</div>
 <div>
 <div class="MathJax_Preview">
 \rightarrow (D+L)x^{(k)} = b-Ux^{(k-1)}
@@ -766,11 +776,16 @@ $$</p>
 \rightarrow x^{(k)} = (D+L)^{-1}(b-Ux^{(k-1)})
 </script>
 </div>
-<p>yang menghasilkan:
-$$
+<p>yang menghasilkan:</p>
+<div>
+<div class="MathJax_Preview">
 X^{(k)}=(D+L)^{-1} UX^{(k-1)}+(D+L)^{-1}b)
-$$
-Metode iterasi Gauss-Seidel hampir sama dengan metode iterasi Jacobi. Perbedaannya hanya terletak pada penggunaan nilai elemen vektor <em><span><span class="MathJax_Preview">x^{baru}</span><script type="math/tex">x^{baru}</script></span></em> yang langsung digunakan pada persamaan di bawahnya.</p>
+</div>
+<script type="math/tex; mode=display">
+X^{(k)}=(D+L)^{-1} UX^{(k-1)}+(D+L)^{-1}b)
+</script>
+</div>
+<p>Metode iterasi Gauss-Seidel hampir sama dengan metode iterasi Jacobi. Perbedaannya hanya terletak pada penggunaan nilai elemen vektor  <em><span><span class="MathJax_Preview">x^{baru}</span><script type="math/tex">x^{baru}</script></span></em>  yang langsung digunakan pada persamaan di bawahnya.</p>
 <h3 id="implementasi-pemrograman_2">Implementasi Pemrograman<a class="headerlink" href="#implementasi-pemrograman_2" title="Permanent link">&para;</a></h3>
 <p>Berikut program untuk persamaan linier dibawah ini:</p>
 <p>1 . 3x + y + 2z = 4</p>

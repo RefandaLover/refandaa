@@ -461,7 +461,7 @@
 <h2 id="metode-recursive-trapezoid">Metode Recursive Trapezoid<a class="headerlink" href="#metode-recursive-trapezoid" title="Permanent link">&para;</a></h2>
 <p>Metode trapesium rekursif adalah suatu metode pendekatan integral numerik dengan polinom orde satu. Dalam metode ini, kurva yang berbentuk lengkung di dekatkan dengan garis lurus sedemikian sehingga bentuk dibawah kurvanya seperti trapesium.</p>
 <p><img alt="trapezoid" src="..\assets\images\trapezoid.jpg" /></p>
-<p>Luas dibawah kurva dengan fungsi <em><span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span></em> antara <em><span><span class="MathJax_Preview">a=x_{0}</span><script type="math/tex">a=x_{0}</script></span></em> dan <em><span><span class="MathJax_Preview">b=x_{1}</span><script type="math/tex">b=x_{1}</script></span></em> didekati oleh suatu trapesium. Dalam trapesium ini f(a) dan f(b) sebgaai alas dan sisi atas dan <em><span><span class="MathJax_Preview">b-a</span><script type="math/tex">b-a</script></span></em> adalah tinggi dari trapesium tersebut. Menurut teorema dasar rumus integral dapat dihitung dengan rumus berikut:</p>
+<p>Luas dibawah kurva dengan fungsi  <em><span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span></em>  antara  <em><span><span class="MathJax_Preview">a=x_{0}</span><script type="math/tex">a=x_{0}</script></span></em>  dan  <em><span><span class="MathJax_Preview">b=x_{1}</span><script type="math/tex">b=x_{1}</script></span></em>  didekati oleh suatu trapesium. Dalam trapesium ini f(a) dan f(b) sebgaai alas dan sisi atas dan <em><span><span class="MathJax_Preview">b-a</span><script type="math/tex">b-a</script></span></em> adalah tinggi dari trapesium tersebut. Menurut teorema dasar rumus integral dapat dihitung dengan rumus berikut:</p>
 <div>
 <div class="MathJax_Preview">
 {\displaystyle \int _{a}^{b}f(x)\,dx=F(b)-F(a)}
@@ -513,7 +513,7 @@ R(1,0) = \frac{1}{2}R(0,0)+h[f(a+h)]
 </script>
 </div>
 <ul>
-<li><span><span class="MathJax_Preview">R(0,0)</span><script type="math/tex">R(0,0)</script></span>* : berdasarkan pada estimasi sebelumnya dan</li>
+<li><em><span><span class="MathJax_Preview">R(0,0)</span><script type="math/tex">R(0,0)</script></span></em> : berdasarkan pada estimasi sebelumnya dan</li>
 <li><em><span><span class="MathJax_Preview">h[f(a)+(h)]</span><script type="math/tex">h[f(a)+(h)]</script></span></em> : berdasarkan pada titik baru</li>
 </ul>
 <p>Jadi, didapatkan formula untuk metode trapesium rekursif seperti berikut :</p>
@@ -535,11 +535,11 @@ R(n,0) = \frac{1}{2}R(n-1,0)+h\left [\sum_{k=1}^{2^{n-1}}f(a+(2k-1)h) \right ]
 </div>
 <h2 id="algoritma-integral-trapezoid">Algoritma Integral Trapezoid<a class="headerlink" href="#algoritma-integral-trapezoid" title="Permanent link">&para;</a></h2>
 <ol>
-<li>definisikan  <em><span><span class="MathJax_Preview">y=f(x)</span><script type="math/tex">y=f(x)</script></span></em></li>
+<li>definisikan   <em><span><span class="MathJax_Preview">y=f(x)</span><script type="math/tex">y=f(x)</script></span></em> </li>
 <li>tentukan batas bawah (a) dan batas atas integrasi (b)</li>
 <li>tentukan jumlah pembagi n</li>
-<li>hitung  <em><span><span class="MathJax_Preview">h=\frac{(b-a)}{2^n}</span><script type="math/tex">h=\frac{(b-a)}{2^n}</script></span></em></li>
-<li>hitung  <em><span><span class="MathJax_Preview">L = \frac{h}{2}\left (f_{0}+2\sum_{i=1}^{n-1}f_{i}+f_{n} \right )</span><script type="math/tex">L = \frac{h}{2}\left (f_{0}+2\sum_{i=1}^{n-1}f_{i}+f_{n} \right )</script></span></em></li>
+<li>hitung   <em><span><span class="MathJax_Preview">h=\frac{(b-a)}{2^n}</span><script type="math/tex">h=\frac{(b-a)}{2^n}</script></span></em> </li>
+<li>hitung   <em><span><span class="MathJax_Preview">L = \frac{h}{2}\left (f_{0}+2\sum_{i=1}^{n-1}f_{i}+f_{n} \right )</span><script type="math/tex">L = \frac{h}{2}\left (f_{0}+2\sum_{i=1}^{n-1}f_{i}+f_{n} \right )</script></span></em> </li>
 </ol>
 <h3 id="listing-program">Listing Program<a class="headerlink" href="#listing-program" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">fungsi</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -549,10 +549,11 @@ R(n,0) = \frac{1}{2}R(n-1,0)+h\left [\sum_{k=1}^{2^{n-1}}f(a+(2k-1)h) \right ]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;f(x) = 1/(1+x)&quot;</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan batas bawah integral : &quot;</span><span class="p">))</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan batas atas integral : &quot;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;masukkan n : &quot;</span><span class="p">))</span>
+<span class="n">eror</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;iterasi&quot;</span><span class="p">,</span><span class="s2">&quot;n&quot;</span><span class="p">,</span><span class="s2">&quot;trapesium&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">iterasi</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">iterasi</span>
+<span class="k">for</span> <span class="n">iterasi</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="o">**</span><span class="n">iterasi</span>
     <span class="n">h</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
 
     <span class="n">xi</span> <span class="o">=</span> <span class="n">a</span>
@@ -561,31 +562,34 @@ R(n,0) = \frac{1}{2}R(n-1,0)+h\left [\sum_{k=1}^{2^{n-1}}f(a+(2k-1)h) \right ]
         <span class="n">xi</span> <span class="o">=</span> <span class="n">xi</span><span class="o">+</span><span class="n">h</span>
         <span class="n">y</span> <span class="o">+=</span> <span class="n">fungsi</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
     <span class="n">hasil</span> <span class="o">=</span> <span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">fungsi</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">+</span><span class="n">fungsi</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-
-    <span class="nb">print</span> <span class="p">(</span><span class="n">iterasi</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">hasil</span><span class="p">)</span>
+    <span class="n">eror</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;iterasi ke-&#39;</span><span class="p">,</span><span class="n">iterasi</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;n:&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;hasil =&#39;</span><span class="p">,</span><span class="n">hasil</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">eror</span><span class="p">[</span><span class="n">iterasi</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eror</span><span class="p">[</span><span class="n">iterasi</span><span class="p">])</span>
+<span class="n">akhir</span> <span class="o">=</span> <span class="p">(</span><span class="n">eror</span><span class="p">[</span><span class="n">iterasi</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">eror</span><span class="p">[</span><span class="n">iterasi</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">akhir</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;estimasi error : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">akhir</span><span class="p">))</span>
 </code></pre></div>
 
 
 <p>Output :</p>
 <div class="codehilite"><pre><span></span><code><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
 <span class="n">Masukkan</span> <span class="n">batas</span> <span class="n">bawah</span> <span class="n">integral</span> <span class="p">:</span> <span class="mi">3</span>
-<span class="n">Masukkan</span> <span class="n">batas</span> <span class="n">atas</span> <span class="n">integral</span> <span class="p">:</span> <span class="mi">9</span>
-<span class="n">iterasi</span> <span class="n">n</span> <span class="n">trapesium</span>
-<span class="mi">1</span> <span class="mi">2</span> <span class="mf">0.9535714285714285</span>
-<span class="mi">2</span> <span class="mi">4</span> <span class="mf">0.9259835752482812</span>
-<span class="mi">3</span> <span class="mi">6</span> <span class="mf">0.9206349206349207</span>
-<span class="mi">4</span> <span class="mi">8</span> <span class="mf">0.9187417990957139</span>
-<span class="mi">5</span> <span class="mi">10</span> <span class="mf">0.9178616651138963</span>
-<span class="mi">6</span> <span class="mi">12</span> <span class="mf">0.9173825142865392</span>
-<span class="mi">7</span> <span class="mi">14</span> <span class="mf">0.9170932391484805</span>
-<span class="mi">8</span> <span class="mi">16</span> <span class="mf">0.9169053416571722</span>
-<span class="mi">9</span> <span class="mi">18</span> <span class="mf">0.916776452709713</span>
-<span class="mi">10</span> <span class="mi">20</span> <span class="mf">0.9166842256515246</span>
-<span class="mi">11</span> <span class="mi">22</span> <span class="mf">0.9166159700113042</span>
-<span class="mi">12</span> <span class="mi">24</span> <span class="mf">0.9165640457073825</span>
-<span class="mi">13</span> <span class="mi">26</span> <span class="mf">0.9165236302295592</span>
-<span class="mi">14</span> <span class="mi">28</span> <span class="mf">0.9164915579455595</span>
-<span class="mi">15</span> <span class="mi">30</span> <span class="mf">0.916465681185743</span>
+<span class="n">Masukkan</span> <span class="n">batas</span> <span class="n">atas</span> <span class="n">integral</span> <span class="p">:</span> <span class="mi">6</span>
+<span class="n">masukkan</span> <span class="n">n</span> <span class="p">:</span> <span class="mi">9</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">1</span> <span class="n">n</span><span class="p">:</span> <span class="mi">1</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5892857142857143</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">2</span> <span class="n">n</span><span class="p">:</span> <span class="mi">2</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5673701298701299</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">3</span> <span class="n">n</span><span class="p">:</span> <span class="mi">4</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5615798017771702</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">4</span> <span class="n">n</span><span class="p">:</span> <span class="mi">8</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5601084791291361</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">5</span> <span class="n">n</span><span class="p">:</span> <span class="mi">16</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5597390679605035</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">6</span> <span class="n">n</span><span class="p">:</span> <span class="mi">32</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5596466146715787</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">7</span> <span class="n">n</span><span class="p">:</span> <span class="mi">64</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5596234950405246</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">8</span> <span class="n">n</span><span class="p">:</span> <span class="mi">128</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5596177147380216</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">9</span> <span class="n">n</span><span class="p">:</span> <span class="mi">256</span> <span class="n">hasil</span> <span class="o">=</span> <span class="mf">0.5596162696377176</span>
+<span class="mf">0.5596177147380216</span>
+<span class="mf">0.5596162696377176</span>
+<span class="mf">1.4451003039761545e-06</span>
+<span class="n">estimasi</span> <span class="n">error</span> <span class="p">:</span> <span class="mf">1.4451003039761545e-06</span>
 </code></pre></div>
                 
                   
